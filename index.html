@@ -3,13 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validador</title>
+    <title>Validador de Senha</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
-        <div>
-            <input type="text" id="password" name="password">
+        <div class="card">
+            <div class="error-box" id="errorBox">
+                <strong>Senha inválida</strong>
+                <ul id="errorList"></ul>
+            </div>
+
+            <h1>Digite sua senha</h1>
+
+            <label for="password">Senha</label>
+            <div class="input-wrapper">
+                <input type="password" id="password" name="password" placeholder="••••••••" autocomplete="new-password">
+                <button class="toggle-btn" id="toggleBtn" type="button" aria-label="Mostrar senha">
+                    <span id="eyeOpen">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15.58 12c0 1.98-1.6 3.58-3.58 3.58S8.42 13.98 8.42 12s1.6-3.58 3.58-3.58 3.58 1.6 3.58 3.58Z" stroke="#555555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 20.27c3.53 0 6.82-2.08 9.11-5.68.9-1.41.9-3.78 0-5.19-2.29-3.6-5.58-5.68-9.11-5.68-3.53 0-6.82 2.08-9.11 5.68-.9 1.41-.9 3.78 0 5.19 2.29 3.6 5.58 5.68 9.11 5.68Z" stroke="#555555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </span>
+                    <span id="eyeClosed" style="display:none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="m14.53 9.47-5.06 5.06a3.576 3.576 0 1 1 5.06-5.06Z" stroke="#555555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M17.82 5.77C16.07 4.45 14.07 3.73 12 3.73c-3.53 0-6.82 2.08-9.11 5.68-.9 1.41-.9 3.78 0 5.19.79 1.24 1.71 2.31 2.71 3.17M8.42 19.53c1.14.48 2.35.74 3.58.74 3.53 0 6.82-2.08 9.11-5.68.9-1.41.9-3.78 0-5.19-.33-.52-.69-1.01-1.06-1.47" stroke="#555555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.51 12.7a3.565 3.565 0 0 1-2.82 2.82M9.47 14.53 2 22M22 2l-7.47 7.47" stroke="#555555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </span>
+                </button>
+            </div>
+            <p class="hint">Mínimo 8 caracteres, 1 número, 1 maiúscula, 1 especial.</p>
+            <p class="success-msg" id="successMsg">Senha válida!</p>
         </div>
     </main>
+    <script src="validador.js"></script>
 </body>
 </html>
