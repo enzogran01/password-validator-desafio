@@ -33,7 +33,7 @@ class ValidaSenha {
     }
 
     verificarEspecial() {
-        if (!/[!@#$%^&*(),.?":{}|<>]/.test(this.senha))
+        if (!/[!@#$%^&*(),.?":{}|<>_]/.test(this.senha))
             this.errors.push("Pelo menos 1 caractere especial");
     }
 
